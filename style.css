@@ -1,0 +1,376 @@
+:root {
+  --bg-dark: #1d1b1b;
+  --text-light: #eaeaea;
+  --accent: #33e033;
+  --gray: #888;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", "Prompt", sans-serif;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  line-height: 1.6;
+  padding: 2rem;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* HEADER */
+
+/* HEADER (LOGO RESPONSIVE) */
+.header {
+  background-image: url(6.png);
+  background-size: cover;
+  background-position: center;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* PC layout (ง่ายขึ้น ไม่เละ) */
+  margin-left: 0;
+  margin-top: 0;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .header {
+    width: 90px;
+    height: 90px;
+
+    margin: 0 auto;       /* จัดโลโก้ให้อยู่กลาง */
+    margin-top: 10px;
+  }
+}
+
+/* VERY SMALL SCREEN */
+@media (max-width: 480px) {
+  .header {
+    width: 75px;
+    height: 75px;
+  }
+}
+
+.header h1 {
+  font-size: 1rem;
+  font-weight: 900;
+  letter-spacing: -2px;
+  margin-left: -85rem;
+  color: #ffffff;
+}
+
+.header span.year {
+  background: var(--accent);
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 10px;
+  margin-left: 0.3rem;
+}
+
+.header p {
+  color: var(--gray);
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+}
+
+/* PROFILE (PHOTO RESPONSIVE) */
+.profile {
+  background-image: url(FF.webp);
+  background-size: cover;
+  background-position: center;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* PC layout */
+  margin-left: auto;
+  margin-right: 0;
+  margin-top: -30px;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .profile {
+    width: 320px;
+    height: 320px;
+    margin: 20px auto 0 auto;  /* อยู่กลางหน้า */
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .profile {
+    width: 260px;
+    height: 260px;
+    margin: 20px auto 0 auto;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .profile {
+    width: 220px;
+    height: 220px;
+  }
+}
+
+
+/* HELLO SECTION */
+
+.hello {
+  margin-top: -250px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 4rem;
+}
+
+.hello-title {
+  font-size: 4rem;
+  font-weight: 900;
+}
+
+.hello-title span {
+  color: var(--accent);
+}
+
+.hello p {
+  max-width: 800px;
+  color: #ffffff;
+}
+
+.contact-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: rem;
+}
+
+.contact-buttons a {
+  text-decoration: none;
+  background: var(--accent);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.3s;
+}
+
+.contact-buttons a:hover {
+  background: #093811;
+}
+
+/* กล่องรวมงานทั้งหมด */
+.work-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;               /* เว้นที่สำหรับเพิ่มผลงาน */
+  margin-top: 50px;
+}
+
+/* รูปผลงานแต่ละชิ้น */
+.img{
+  background-image: url(8.png);
+  background-size: cover;
+  background-position: center;
+  width: 425px;
+  height: 300px;
+  border-radius: 20px;     /* โค้งนิดๆ ให้ดูโมเดิร์น */
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+.gg{
+    margin-top: 80px;
+    margin-left: 230px;
+}
+.img88{
+  background-image: url(3.png);
+  background-size: cover;
+  background-position: center;
+  margin-left: 225px;
+  width: 425px;
+  height: 300px;
+  border-radius: 20px;     /* โค้งนิดๆ ให้ดูโมเดิร์น */
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+.mo{
+    font-size: 0.5rem;
+    margin-top: 20px;
+    margin-left: 270px;
+}
+
+/* SECTIONS GRID */
+
+.grid {
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+/* กล่องข้อมูลแต่ละส่วน */
+.section {
+  background: #1a1a1a;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transition: 0.25s ease;
+}
+
+/* หัวข้อ */
+.section h2 {
+  color: #33e033;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* รายการทั่วไป */
+.section ul {
+  list-style: none;
+  color: #ccc;
+  font-size: 0.95rem;
+  padding: 0;
+  margin: 0;
+}
+
+.section ul li {
+  margin-bottom: 0.4rem;
+}
+
+/* TAG */
+.tag {
+  background: #2a2a2a;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+/* SOFTWARE LIST */
+.softwares {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 10px;
+}
+
+.softwares .tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #2a2a2a;
+  padding: 0.6rem 1rem;
+}
+
+.softwares .tag img {
+  width: 28px;
+  height: 28px;
+}
+
+/* SKILLS */
+.skills {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.skills li {
+  background: #2a2a2a;
+  color: #e0e0e0;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  transition: all 0.25s ease;
+}
+
+.skills li > img {
+  width: 22px;
+  height: 22px;
+  filter: invert(77%) sepia(68%) saturate(3534%) hue-rotate(1deg) brightness(104%) contrast(97%);
+}
+
+/* Dev Icons */
+.dev-icons {
+  display: flex;
+  gap: 10px;
+  margin-left: 28px;
+}
+
+.dev-icons img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.2s ease;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  color: #777;
+  margin-top: 4rem;
+  font-size: 0.85rem;
+}
+
+
+/* -------------------------
+      RESPONSIVE
+-------------------------- */
+@media (max-width: 768px) {
+  .grid {
+    margin-top: 120px;
+    gap: 1.5rem;
+  }
+
+  .section {
+    padding: 1.5rem;
+  }
+
+  .section h2 {
+    font-size: 1.2rem;
+  }
+
+  .softwares .tag img,
+  .dev-icons img {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 1.2rem;
+  }
+
+  .tag {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.7rem;
+  }
+
+  .skills li {
+    font-size: 0.9rem;
+  }
+}
